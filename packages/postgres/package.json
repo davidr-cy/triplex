@@ -26,14 +26,9 @@
   ],
   "type": "module",
   "sideEffects": false,
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./src/index.ts",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "default": "./dist/index.js"
-    }
+    ".": "./src/index.ts"
   },
   "publishConfig": {
     "access": "public"
@@ -47,19 +42,12 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@effect/sql-pg": "catalog:",
+    "@effect/sql-pg": "4.0.0-rc.116",
     "@triplex-build/triplex": "workspace:^",
     "@triplex-build/triplex-sql": "workspace:^"
   },
-  "devDependencies": {
-    "@triplex-build/triplex-testkit": "workspace:^",
-    "@types/node": "catalog:",
-    "effect": "catalog:",
-    "testcontainers": "catalog:",
-    "vitest": "catalog:"
-  },
   "peerDependencies": {
-    "effect": "catalog:"
+    "effect": "^4.0.0-rc.112"
   },
   "engines": {
     "node": ">=22"
